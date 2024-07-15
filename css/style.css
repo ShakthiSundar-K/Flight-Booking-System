@@ -1,0 +1,457 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&display=swap');
+/* CSS Variables*/
+
+:root{
+  --primary-color: #3d5cb8;
+  --primary-color-dark: #334c99;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f1f5f9;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+/* global use */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.img-zoom{
+    transition: all 1s ease;
+}
+.img-zoom:hover{
+    transform: scale(1.1);
+}
+.container-fluid{
+    max-width: 100%;
+}
+
+/* Body Style */
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins" , sans-serif;
+    border: 0px;
+    padding: 0px;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth
+}
+ 
+/* Navigation Bar */
+
+nav{
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: #f7f8f8;
+}
+
+.link{
+    display: inline-block;
+    padding: 0px 10px;
+    padding-top: 5px;
+    
+}
+
+.link a{
+    text-decoration: none;
+    cursor: pointer;
+    color: #a50034;
+}
+
+
+.link a:hover{
+    background-color: var(--text-light);
+    border-radius: 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    padding: 10px 10px;
+    transition: ease-in-out;
+}
+
+.nav_logo{
+    padding:0 0 0 50px;
+    font-weight: 500;
+    font-family: "Margarine";
+    font-size: 1.1rem;
+}
+
+.login{
+    padding:0 35px 0 0
+}
+
+.btns{
+    background-color:#a50034;
+    color: var(--white);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/* main content */
+
+/* site title  */
+
+
+main .site-title{
+    background-image: url('../assests/mflight.jpg');
+    background-size: cover;
+    height: 500px;
+    display:flex;
+    justify-content: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+main .site-title .site-background{
+    padding-top: 12rem;
+    text-align: center;
+    font-family: "Lexend";
+    font-weight:500;
+    font-size: 2rem;
+    color: var(--text-dark);
+}
+
+main .site-title .btn-2{
+    margin: 1.8rem;
+    background: #D0D0D0;
+    border-radius: 2rem;
+    border: none;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+    font-family: "Poppins";
+    
+}
+main .site-title .btn-2:hover{
+    cursor:pointer;
+    background: transparent;
+    border: 2px solid #D0D0D0;
+}
+/* site title  */
+
+
+/* Promo section  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+
+.promo-section {
+    text-align: center;
+    font-family: "Lexend";
+    color: white;
+    
+}
+.promo-text{
+    background: linear-gradient(to bottom, rgb(94, 18, 78), #a50034);
+    text-align: center;
+
+    color: white;
+    padding: 20px;
+}
+
+.promo-text h1 {
+    margin: 1rem 0rem;
+    
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.promo-text p {
+    margin-bottom:1rem;
+    font-size: 1.2em;
+}
+
+.promo-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap:  nowrap;
+
+}
+
+.card {
+    
+    width: 300px;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-image {
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(100%);
+    transition: filter 0.3s, transform 0.3s;
+}
+
+.card:hover .card-image {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.card-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--white);
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.know-more {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    font-size: 1em;
+    color: white;
+    background-color: #a50034;
+    border: none;
+    cursor: pointer;
+    display: none;
+    transition: display 0.3s;
+}
+
+.card:hover .know-more {
+    display: block;
+}
+
+
+/* Promo section  */
+
+
+/* main travel blog */
+/*
+.container-fluid{
+    margin: 0 ;
+    padding: 0;
+    width: 100%
+}
+main.blog{
+    height:100vh;
+    width:100%
+} 
+main .blog .blog-post{
+    padding-top:6rem;
+}
+.blog .container .title{
+    background-color: #a50034;;
+}
+main .blog .blog-post .blog-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+    margin:2rem 2rem;
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+}
+main .blog .blog-post .blog-content .blog-title{
+    padding: 2rem;
+}
+main .blog .blog-post .blog-content .btn-3{
+    background-color: var(--text-light);
+    color: var(--white);
+    border-radius: 2rem;
+    padding: 0.5rem 2rem;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 0.75rem;
+}
+
+main .container .owl-nav{
+    position: absolute;
+    top: 10;
+    margin: 0 ;
+    width: 100%;
+}
+main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next{
+    font-size: 1.2rem;
+    
+}
+main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
+    font-size: 1.2rem;
+    
+}
+
+*/
+/*  services  */
+
+/* 
+#services .container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 5px 20px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 3rem;
+}
+
+.services-image {
+    grid-column: span 4;
+}
+
+.services-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.services-content {
+    grid-column: span 8;
+   
+    padding-right: 4px;
+}
+
+.services-content p {
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+*/
+/*  services  */
+
+/*  hotel stay  */
+
+.hotel {
+    position: relative;
+    height: 500px; /* Set a height to see the background image */
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('../assests/hotel-3.jpg');
+    background-size: cover; /* Adjust the image size to cover the entire pseudo-element */
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+.hotel p {
+    color: white;
+    font-family: "Mitr";
+    z-index: 1;
+    font-weight: 500; /* Corrected font-weight value */
+    position: relative; /* Ensure text remains above the pseudo-element */
+}
+.hotel h1 > p{
+    font-size: 3rem;
+    font-weight: 5rem;
+    font-family: "Mitr";
+}
+
+
+
+/*  hotel stay  */
+
+/* main content */
+
+
+/*Footer*/
+ .footer{
+    height:100%;
+    background: #0f0f0f;
+    position: relative;
+}
+.footer .container{
+    color: var(--extra-light);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    
+}
+.footer .container > div{
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 3rem 0.9rem;
+}
+.footer .container p{
+    color: var(--text-light);
+}
+.footer .container a{
+    text-decoration: none;
+}
+
+.footer .newsletter .form-elements{
+    display: inline-block;
+    
+}
+.footer .newsletter .form-elements input{
+    outline: none;
+    border: none;
+    padding: 0.5rem 0.7rem;
+    background: grey;
+    font-size: 0.rem;
+}
+.footer .newsletter .form-elements input::placeholder{
+    color: white;
+}
+.footer .newsletter .form-elements span{
+    background: lightskyblue;
+    padding: 0.3rem .7rem;
+    cursor: pointer;
+}
+.footer .insta div > img{
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    margin: .3rem .4rem;
+}
+.footer .follow div i{
+    padding:0.3rem 0.3rem;
+    margin-top: 1rem;
+}
+.footer .rights{
+    color: var(--text-light);
+    justify-content: center;
+    padding-bottom: 3rem;
+    font-weight: 5remx;
+}
+.footer .rights .logo{
+    font-family: "Margarine";
+    padding-left: 0.5rem;
+    
+}
+/*Footer*/
+
+
