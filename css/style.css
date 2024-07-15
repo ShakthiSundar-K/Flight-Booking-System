@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans+Caption:wght@400;700&display=swap');
+
 /* CSS Variables*/
 
 :root{
@@ -78,6 +79,11 @@ nav{
     color: #a50034;
 }
 
+.login a{
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--extra-light);
+}
 
 .link a:hover{
     background-color: var(--text-light);
@@ -389,68 +395,44 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
 
 
 /*Footer*/
- .footer{
-    height:100%;
-    background: #0f0f0f;
-    position: relative;
-}
-.footer .container{
-    color: var(--extra-light);
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
+.footer {
     
+    background: #faf3e3;
+    padding: 40px 0;
 }
-.footer .container > div{
-    flex-grow: 1;
-    flex-basis: 0;
-    padding: 3rem 0.9rem;
+.border-bottom-dotted {
+    border-bottom: 1px dotted grey;
 }
-.footer .container p{
-    color: var(--text-light);
-}
-.footer .container a{
+.footer a {
+    color: #0f172a;
     text-decoration: none;
 }
-
-.footer .newsletter .form-elements{
-    display: inline-block;
-    
+.footer a:hover {
+    text-decoration: underline;
 }
-.footer .newsletter .form-elements input{
-    outline: none;
-    border: none;
-    padding: 0.5rem 0.7rem;
-    background: grey;
-    font-size: 0.rem;
+.footer .column-title {
+    font-weight: bold;
+    color: #9F2B68;
+    margin-bottom: 10px;
 }
-.footer .newsletter .form-elements input::placeholder{
-    color: white;
+.footer .social-icons a {
+    margin-right: 15px;
+    color: #0f172a;
 }
-.footer .newsletter .form-elements span{
-    background: lightskyblue;
-    padding: 0.3rem .7rem;
-    cursor: pointer;
+.footer-bottom {
+    padding: 20px 0;
+    border-top: 1px solid #e1e1e1;
+    margin-top: 20px;
 }
-.footer .insta div > img{
-    display: inline-block;
-    width: 25%;
-    height: 50%;
-    margin: .3rem .4rem;
+.list-inline-item:not(:last-child)::after {
+    content: "•";
+    margin-left: 8px;
+    margin-right: 8px;
+    color: #0f172a;
 }
-.footer .follow div i{
-    padding:0.3rem 0.3rem;
-    margin-top: 1rem;
-}
-.footer .rights{
-    color: var(--text-light);
-    justify-content: center;
-    padding-bottom: 3rem;
-    font-weight: 5remx;
-}
-.footer .rights .logo{
-    font-family: "Margarine";
-    padding-left: 0.5rem;
-    
+.footer .social-icons img {
+    width: 24px;
+    height: 24px;
 }
 /*Footer*/
 
