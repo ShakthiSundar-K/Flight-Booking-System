@@ -35,7 +35,7 @@
     transition: all 1s ease;
 }
 .img-zoom:hover{
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 .container-fluid{
     max-width: 100%;
@@ -316,45 +316,102 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
 */
 /*  services  */
 
-/* 
+ 
 #services .container {
     max-width: 1300px;
-    margin: 0 auto;
-    padding: 5px 20px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+   margin-top: 5rem;
 }
 
 .services-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .services-image {
-    grid-column: span 4;
+    grid-column: span 6;
 }
 
 .services-image img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    height: 500px;
+    
 }
 
 .services-content {
-    grid-column: span 8;
-   
-    padding-right: 4px;
+    grid-column: span 6;
+    padding-left: 3rem;
 }
 
 .services-content p {
     margin-bottom: 1.5rem;
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
+   
 }
 
-*/
+
 /*  services  */
+
+/*  Food  */
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-large {
+    width: 100%;
+    height: 575px;
+}
+.cabin .card{
+    height: 300px;
+    box-sizing: border-box;
+}
+.cabin .card:hover{
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card-small {
+    transform: scale(0.9); /* Adjust the scale as needed */
+}
+.container {
+    max-width: 1300px; /* Adjust the max width as needed */
+}
+.custom-col {
+    padding-bottom: 0.5rem; /* Adjust this value to reduce the space between rows */
+}
+
+.cabin .custom-col .card {
+    margin-bottom: 0;
+}
+.cabin .col-6 {
+    padding: 0;
+    margin: 0;
+}
+
+/* Adjust card margin */
+.card-small {
+    margin-bottom: 0.5rem; /* Adjust this value as needed */
+}
+
+/* Optional: reduce padding inside the card body */
+.card-body {
+    padding: 0.75rem; /* Adjust this value as needed */
+}
+.card img{
+    transition: all 1s ease;
+}
+.card img:hover{
+    transform: scale(1.05);
+}
+/*  Food  */
 
 /*  hotel stay  */
 
@@ -370,6 +427,14 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     background-size: cover; /* Adjust the image size to cover the entire pseudo-element */
     background-position: center;
     background-repeat: no-repeat;
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-top: 3rem;
+    transition: all 1s ease;
+}
+
+.hotel:hover{
+    transform: scale(1.05);
 }
 
 
