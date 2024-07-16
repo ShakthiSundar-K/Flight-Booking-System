@@ -10,27 +10,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+HR+Lijeva:wght@100..400&family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+    <style>
+        .btn:hover {
+      background-color: white;
+      border: 1px solid #a50034;
+      color: #a50034 ;
+    }
+    .btn{
+        background-color: #a50034;
+        color: white;
+    }
+     a:hover{
+        color: #a50034;
+    }
+    .nav-link:hover{
+        color: #a50034;
+    }
+    </style>
 </head>
-<body>
+<body style="background-color: #f7f8f8">
     <!-------------------nav bar----------------------------->
-    <nav>
-        <div class="nav_logo">SKYHIGH</div>
-        <div class="nav_links ">
-            <ul class="nav_menu">
-                <li class="link"><a href="../index.html">Home</a></li>
-                <li class="link"><a href="#">About</a></li>
-                <li class="link"><a href="#">Offers</a></li>
-                <li class="link"><a href="#">Services</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3" href="#" style="font-family: Margarine;">SKYHIGH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/book.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+              </li>
             </ul>
+          </div>
+          <div class="login">
+            <button class="btn"><a href="./html/login.html" style="text-decoration: none;">Login</a></button>
+          </div>
         </div>
-        <div class="login">
-            <button class="btns"><a href="./html/login.html">Login</a></button>
-        </div>
-    </nav>
+      </nav>
     
     <!---------X----------nav bar----------X------------------->
 
-    <div class="container mt-5">
+    <div class="container mt-5" style="background-color: #f7f8f8">
         <p style="text-align: center;" class="text-muted">FLYING WITH SKYHIGH</p>
         <p style="text-align: center;font-family: Montserrat;font-size: 3rem;font-weight: 500;">Make it an incredible journey</p>
         <p style="text-align: center;" class="text-muted">Explore the Skyhigh experience and plan an unforgettable trip beyond your flight.</p>
@@ -38,7 +68,7 @@
 
     <!--------------------------food------------------------------------>
 
-    <div class="container my-5" style="padding: 2rem; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+    <div class="container my-5" style="padding: 2rem; box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);background-color: #f7f8f8;">
         <div class="row" style="box-sizing: border-box;">
             <div class="col-md-6 mt-3">
                 <div class="card card-large card-img-top">
@@ -105,7 +135,7 @@
 
      <!------------X-----------------service description----------X-------------->
 
-    <section id="services" style="margin-bottom: 5rem;">
+    <section id="services" style="margin-bottom: 5rem;background-color: #f7f8f8">
         <div class="container">
             
             <div class="services-grid" >
@@ -133,7 +163,7 @@
    
 
     <!----------------------------Hotel Stay----------------------------------------------->
-<main class="container-fluid">
+<main class="container-fluid" style="background-color: #f7f8f8">
 <div class="hotel">
     <h5><p>COMPLIMENTARY HOTEL STAY</p></h5>
     <h1><p>Stay at the JW Marriott Marquis on us</p></h1>
@@ -146,7 +176,7 @@
 
 <!----------------------Customer review------------------------------>
 
-<section id="testimonials" style="padding: 4rem 0;">
+<section id="testimonials" style="padding: 4rem 0;background-color: #f7f8f8;">
     <div class="container" style="font-family: sans-serif;">
         <h2 style="text-align: center; margin-bottom: 3rem; font-family: Montserrat;">What Our Customers Say</h2>
         <div class="row d-flex justify-content-between">

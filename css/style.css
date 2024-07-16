@@ -256,6 +256,54 @@ body {
 
 /* Promo section  */
 
+/*  Offers section  */
+
+.red-line {
+    position: absolute;
+    bottom: 40px; /* Adjust this value based on your design */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%; /* Adjust width as needed */
+    height: 2px;
+    background-color: #a50034;
+    z-index: 1;
+}
+
+.carousel-item {
+    position: relative;
+}
+.carousel-item img {
+    height: 600px; /* Set your desired height */
+    width: 100%; /* Make sure the image takes up the full width */
+    object-fit: cover; /* Ensure the image covers the element */
+}
+.carousel-caption-top {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: white;
+}
+.carousel-caption-top h3 {
+    font-size: 2rem;
+}
+.carousel-caption-bottom {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.carousel-caption-bottom .btn {
+    background-color: #a50034;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+/* Offers section  */ 
+
 
 /* main travel blog */
 /*

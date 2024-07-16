@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Flight - SKYHIGH</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Margarine&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+SC:wght@100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&family=Playwrite+HR+Lijeva:wght@100..400&family=Playwrite+HR:wght@100..400&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    body {
+      background-color: #f1f5f9;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-family: "Montserrat", sans-serif;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .btn:hover {
+      background-color: white;
+      border: 1px solid #a50034;
+      color: #a50034 ;
+    }
+    .dropdown-select {
+      width: 100%;
+      padding: 0.375rem 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+    }
+    .btn{
+        background-color: #a50034;
+        color: white;
+    }
+     a:hover{
+        color: #a50034;
+    }
+    .nav-link:hover{
+        color: #a50034;
+    }
+    .login{
+        color:white
+    }
+    .login:hover{
+        color:#a50034
+    }
+   
+  </style>
+</head>
+<body>
+    <!-----------------Navigation Bar------------------------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand ms-3" href="#" style="font-family: Margarine;">SKYHIGH</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/book.html">Book</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../html/service.html">Services</a>
+              </li>
+            </ul>
+          </div>
+          <div class="login">
+            <button class="btn"><a href="./html/login.html" style="text-decoration: none;" class="login">Login</a></button>
+          </div>
+        </div>
+      </nav>
+    
+  
+  <!-- Booking Form -->
+  <div class="container mt-5">
+    <h2>Book Your Flight</h2>
+    <form id="bookingForm" onsubmit="calculateCost(event)">
+      <div class="row g-3">
+        <div class="col-md-6">
+          <label for="from" class="form-label">From:</label>
+          <input type="text" id="from" class="form-control" placeholder="Departure City" required>
+        </div>
+        <div class="col-md-6">
+          <label for="to" class="form-label">To:</label>
+          <input type="text" id="to" class="form-control" placeholder="Destination City" required>
+        </div>
+        <div class="col-md-6">
+          <label for="departureDate" class="form-label">Departure Date:</label>
+          <input type="date" id="departureDate" class="form-control" required>
+        </div>
+        <div class="col-md-6">
+          <label for="returnDate" class="form-label">Return Date:</label>
+          <input type="date" id="returnDate" class="form-control">
+        </div>
+        <div class="col-md-6">
+          <label for="passengers" class="form-label">Passengers:</label>
+          <input type="number" id="passengers" class="form-control" min="1" max="10" value="1" required>
+        </div>
+        <div class="col-md-6">
+          <label for="class" class="form-label">Class:</label>
+          <select id="class" class="form-select" required>
+            <option value="economy" selected>Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First</option>
+          </select>
+        </div>
+      </div>
+      <div class="text-end mt-3"> <!-- Use Bootstrap's text-end class for right alignment -->
+        <button type="submit" class="btn btn-confirm btn-lg" onclick="calculateCost()">Confirm Booking</button>
+    </div>
+    </form>
+    <div id="costDisplay" style="display: none;">
+      <hr>
+      <h3>Booking Summary</h3>
+      <p><strong>From:</strong> <span id="summaryFrom"></span></p>
+      <p><strong>To:</strong> <span id="summaryTo"></span></p>
+      <p><strong>Departure Date:</strong> <span id="summaryDepartureDate"></span></p>
+      <p><strong>Return Date:</strong> <span id="summaryReturnDate"></span></p>
+      <p><strong>Passengers:</strong> <span id="summaryPassengers"></span></p>
+      <p><strong>Class:</strong> <span id="summaryClass"></span></p>
+      <p><strong>Total Cost:</strong> <span id="totalCost"></span></p>
+      <div class="text-end">
+      <button class="btn btn-lg mt-3 btn-block">Pay Now</button>
+    </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script>
+    // Dummy data for continents, countries, and cities
+    // Existing code snippet with modifications and additions
+const continentsData = [
+  { name: 'Asia', countries: ['India', 'Japan', 'China'] },
+  { name: 'Europe', countries: ['France', 'Germany', 'Italy'] }
+  // Add more continents with countries as needed
+];
+
+const cityData = {
+  'India': ['Mumbai', 'Delhi', 'Bangalore'],
+  'Japan': ['Tokyo', 'Osaka', 'Kyoto'],
+  'China': ['Beijing', 'Shanghai', 'Guangzhou'],
+  'France': ['Paris', 'Marseille', 'Lyon'],
+  'Germany': ['Berlin', 'Munich', 'Hamburg'],
+  'Italy': ['Rome', 'Milan', 'Venice']
+  // Add more countries with cities as needed
+};
+
+// Function to create and populate dropdowns
+function createDropdown(inputField) {
+  // Clear existing dropdown if any
+  clearDropdown();
+
+  // Create continent dropdown
+  let continentSelect = document.createElement("select");
+  continentSelect.setAttribute("id", "continentSelect");
+  continentSelect.setAttribute("class", "dropdown-select");
+  continentSelect.addEventListener("change", function() {
+    populateCountryDropdown(this.value);
+  });
+  let continentOption = document.createElement("option");
+  continentOption.textContent = "Select Continent";
+  continentSelect.appendChild(continentOption);
+
+  continentsData.forEach(continent => {
+    let option = document.createElement("option");
+    option.value = continent.name;
+    option.textContent = continent.name;
+    continentSelect.appendChild(option);
+  });
+
+  inputField.parentNode.appendChild(continentSelect);
+
+  // Function to populate country dropdown based on selected continent
+  function populateCountryDropdown(continentName) {
+    clearDropdown();
+    let countrySelect = document.createElement("select");
+    countrySelect.setAttribute("id", "countrySelect");
+    countrySelect.setAttribute("class", "dropdown-select");
+    countrySelect.addEventListener("change", function() {
+      populateCityDropdown(this.value);
+    });
+    let countryOption = document.createElement("option");
+    countryOption.textContent = "Select Country";
+    countrySelect.appendChild(countryOption);
+
+    continentsData.forEach(continent => {
+      if (continent.name === continentName) {
+        continent.countries.forEach(country => {
+          let option = document.createElement("option");
+          option.value = country;
+          option.textContent = country;
+          countrySelect.appendChild(option);
+        });
+      }
+    });
+
+    inputField.parentNode.appendChild(countrySelect);
+  }
+
+  // Function to populate city dropdown based on selected country
+  function populateCityDropdown(countryName) {
+    clearDropdown();
+    let citySelect = document.createElement("select");
+    citySelect.setAttribute("id", "citySelect");
+    citySelect.setAttribute("class", "dropdown-select");
+    citySelect.addEventListener("change", function() {
+      // Set selected city to input field
+      inputField.value = this.value;
+      clearDropdown(); // Clear dropdown after selection
+    });
+    let cityOption = document.createElement("option");
+    cityOption.textContent = "Select City"
+    citySelect.appendChild(cityOption);
+
+    if (cityData.hasOwnProperty(countryName)) {
+      cityData[countryName].forEach(city => {
+        let option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    }
+
+    inputField.parentNode.appendChild(citySelect);
+  }
+
+  // Function to clear existing dropdowns
+  function clearDropdown() {
+    let existingDropdowns = document.querySelectorAll(".dropdown-select");
+    existingDropdowns.forEach(dropdown => {
+      dropdown.parentNode.removeChild(dropdown);
+    });
+  }
+}
+
+// Add event listeners to "From" and "To" input fields
+document.getElementById('from').addEventListener('click', function() {
+  createDropdown(this);
+});
+
+document.getElementById('to').addEventListener('click', function() {
+  createDropdown(this);
+});
+
+// Function to calculate and display booking cost
+function calculateCost(event) {
+  event.preventDefault();
+
+  // Retrieve form values
+  let from = document.getElementById('from').value.trim();
+  let to = document.getElementById('to').value.trim();
+  let departureDate = document.getElementById('departureDate').value.trim();
+  let returnDate = document.getElementById('returnDate').value.trim(); // New: Retrieve return date
+  let passengers = document.getElementById('passengers').value.trim();
+  let selectedClass = document.getElementById('class').value.trim(); // New: Retrieve selected class
+  
+  // Check if all required fields are filled
+  if (from === '' || to === '' || departureDate === '' || passengers === '') {
+    alert('Please fill out all required fields.');
+    return;
+  }
+
+  // Display summary
+  document.getElementById('summaryFrom').textContent = from;
+  document.getElementById('summaryTo').textContent = to;
+  document.getElementById('summaryDepartureDate').textContent = departureDate;
+  document.getElementById('summaryReturnDate').textContent = returnDate; // New: Display return date
+  document.getElementById('summaryPassengers').textContent = passengers;
+  document.getElementById('summaryClass').textContent = selectedClass; // New: Display selected class
+
+  // Optional: Calculate total cost based on selected class and number of passengers
+  let totalCost = calculateTotalCost(selectedClass, passengers); // Example function to calculate total cost
+  document.getElementById('totalCost').textContent = '$' + totalCost.toFixed(2); // Example format: $1234.56
+
+  // Show cost display section
+  document.getElementById('costDisplay').style.display = 'block';
+}
+
+// Example function to calculate total cost (replace with your actual calculation logic)
+function calculateTotalCost(selectedClass, passengers) {
+  let baseFare = 200; // Example base fare
+  let costPerPassenger = {
+    'economy': 200,
+    'business': 500,
+    'first': 1000
+    // Adjust prices based on your pricing structure
+  };
+
+  let totalCost = baseFare + (costPerPassenger[selectedClass] * passengers);
+  return totalCost;
+}
+
+// Initialize form with hidden cost display
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('costDisplay').style.display = 'none';
+});
+
+// Event listener for form submission to calculate cost
+document.getElementById('bookingForm').addEventListener('submit', calculateCost);
+
+  </script>
+  
+</body>
+</html>
+
