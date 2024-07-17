@@ -568,8 +568,7 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     }
     
     main .site-title  h2 {
-        font-size: 0.8rem; /* Adjust subheading font size for smaller screens */
-        transform: translate(-18rem, -5rem);
+       display: none;
     }
     .promo-text h1{
         font-size: 1.2rem;
@@ -618,6 +617,17 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
         font-size: 1.2rem; /* Decrease icon size for smaller screens */
     }
     .red-line{
+        display: none;
+    }
+    #dream-para{
+        font-size: 0.5rem;
+    }
+    #dream{
+        font-size: 2rem !important;
+        font-weight: 350;
+        
+    }
+    .downloadimg{
         display: none;
     }
 }
