@@ -555,6 +555,7 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
 @media (max-width: 768px) {
     main .site-title {
         height: 250px; /* Adjust height as needed for mobile layout */
+        background-position: right;
     }
     
     main .site-title .site-background {
@@ -564,7 +565,7 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     
     main .site-title .site-background h1{
         font-size: 1.5rem !important;
-        transform: translate(20rem, 3rem);
+        transform: translate(32rem, 10rem);
     }
     
     main .site-title  h2 {
@@ -649,6 +650,9 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
         height: 500px;
         margin-bottom: 2rem;
     }
+    #services .container{
+        margin-top: 2rem !important;
+    }
     .services-content {
         grid-column: span 12;
         padding-left: 0;
@@ -658,6 +662,10 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     }
     .services-image{
         grid-column: span 12;
+        
+    }
+    .services-image img{
+        height: 300px;
     }
     .food{
         padding: 0px !important;
