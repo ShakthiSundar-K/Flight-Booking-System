@@ -617,5 +617,8 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     .social-icons a i {
         font-size: 1.2rem; /* Decrease icon size for smaller screens */
     }
+    .red-line{
+        display: none;
+    }
 }
 
