@@ -630,5 +630,60 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     .downloadimg{
         display: none;
     }
+    .card-small{
+        width: 100%;
+       
+    }
+    .card-small img{
+        height: 200px;
+    }
+    .card-large img{
+        height: 200px;
+    }
+    .card-large p{
+        font-size: 1rem;
+        text-align: center !important;
+        padding: 0;
+    }
+    .card-large{
+        height: 500px;
+        margin-bottom: 2rem;
+    }
+    .services-content {
+        grid-column: span 12;
+        padding-left: 0;
+        text-align: start;
+        padding: auto !important;
+        margin: auto !important;
+    }
+    .services-image{
+        grid-column: span 12;
+    }
+    .food{
+        padding: 0px !important;
+    }
+    .hotel h1 > p{
+        font-size: 1rem;
+        font-weight: 0.5rem;
+        font-family: "Mitr";
+        
+    }
+    .hotel h6 > p{
+        text-align: center !important;
+    }
+    .hotel{
+        margin: 0px !important;
+    }
+     .service-heading{
+        font-size: 2rem !important;
+    }
+    .dubai{
+        font-size: 2rem !important;
+        padding: 0 !important;
+    }
+    .main p{
+        text-align: center !important;
+        padding: auto 0!important;
+    }
 }
 
