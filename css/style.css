@@ -550,3 +550,72 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
 /*Footer*/
 
 
+/* media query */
+
+@media (max-width: 768px) {
+    main .site-title {
+        height: 250px; /* Adjust height as needed for mobile layout */
+    }
+    
+    main .site-title .site-background {
+        padding-top: 6rem; /* Adjust padding for smaller screens */
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+    
+    main .site-title .site-background h1{
+        font-size: 1.5rem !important;
+        transform: translate(20rem, 3rem);
+    }
+    
+    main .site-title  h2 {
+        font-size: 0.8rem; /* Adjust subheading font size for smaller screens */
+        transform: translate(-18rem, -5rem);
+    }
+    .promo-text h1{
+        font-size: 1.2rem;
+    }
+    .promo-text p{
+        font-size: 0.75rem;
+    }
+    .promo-text{
+        padding: 0.5rem 1rem;
+        margin-top: 0;
+    }
+    .promo-cards{
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    .promo-cards .card{
+        width: 100%;
+    }
+    #travel-img1 img{
+        height: 500px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    #travel-img2 img{
+        height: 500px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    #travel-img3 img{
+        height: 500px;
+        width: 70%;
+        margin: 0 auto;
+    }
+    .prepare{
+        padding-bottom: 5rem;
+        margin: 0;
+        
+    }
+    .prepare p{
+        font-size: 1rem;
+    }
+    .row{
+        text-align: center;
+    }
+    .social-icons a i {
+        font-size: 1.2rem; /* Decrease icon size for smaller screens */
+    }
+}
+
