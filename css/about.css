@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    margin: 0; /* Added to eliminate default margin */
+}
+
+.hero {
+    box-sizing: border-box;
+}
+
+.heading h1 {
+    font-size: 45px; /* Reduced font size */
+    text-align: center;
+    margin-top: 80px; /* Adjusted margin */
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.hc {
+    flex: 1;
+    width: 600px;
+    margin-bottom: 10rem;
+}
+
+.hc h2 {
+    font-size: 32px; /* Reduced font size */
+    margin-bottom: 20px;
+    text-align: center; /* Centered text */
+}
+
+.hc p {
+    font-size: 20px; /* Reduced font size */
+    color: rgb(0, 0, 0);
+    line-height: 1.6; /* Improved line height for readability */
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-left: 2rem;
+    margin-bottom: 13rem;
+    margin-top: 5rem;
+}
+
+.f {
+   height: 400px !important;
+    border-radius: 10px;
+}
+.f2 {
+   height: 300px !important;
+    border-radius: 10px;
+}
+.wright img{
+    height: 400px !important;
+    border-radius: 10px ;
+    width: 550px;
+}
+.container1,
+.container3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 40px auto; /* Adjusted margin */
+}
+
+.custom-img-size {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border: none;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+.custom-img-size:hover {
+    filter: grayscale(0%);
+}
+
+.col-md-6 p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin-bottom: 0px !important;
+    }
+
+    .hc {
+        margin-top: 3rem; /* Adjusted margin */
+        width: 100%;
+        margin-bottom: 1rem !important;
+    }
+
+   .hc p{
+    text-align: start !important;
+    padding-left: 0rem !important;
+    margin-bottom: 0rem !important;
+    margin-top: 1rem !important;
+   }
+   .hc h2{
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+   }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transform: none;
+        margin-top: 0 !important;
+    }
+
+    .f {
+        width: 100% !important;
+        height: 300px !important;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+   
+    .container3 {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 3rem !important;
+    }
+
+    .custom-img-size {
+        width: 100%;
+        height: auto;
+    }
+
+    .col-md-6 p {
+        font-size: 16px; /* Reduced font size */
+        margin: 10px 0;
+    }
+    .wright img{
+        width: 91% !important;
+        margin-bottom: 3rem !important;
+    }   
+    .wright-para{
+        padding-left: 1.5rem !important;
+    }
+    .wright-para h2{
+        text-align: center;
+    }
+    h6{
+        font-size: 2rem !important;
+    }
+    .hero-image{
+        display: none !important;
+    }
+    .hc h2{
+        margin-bottom: 3rem !important;
+    }
+    .container1{
+        margin-bottom: 0px !important;
+
+
+    }
+    .container{
+        margin-top: 0 !important;
+    }
