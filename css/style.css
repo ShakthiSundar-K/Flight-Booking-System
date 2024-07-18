@@ -147,22 +147,6 @@ main .site-title .site-background{
     color: #F9F6EE;
     display: inline-block;
     letter-spacing: 5px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: .15em solid; /* This creates the cursor effect */
-    animation: typing 5s steps(40, end) infinite, cursor 2s step-end infinite alternate;
-}
-
-@keyframes typing {
-    0% { width: 0; }
-    50% { width: 100%; }
-    100% { width: 0; } /* Reset to zero width to create the looping effect */
-}
-
-@keyframes cursor {
-    0% { border-color: transparent; }
-    50% { border-color: transparent; }
-    100% { border-color: transparent; }
 }
 
 .site-title .site-background h2{
