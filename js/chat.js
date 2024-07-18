@@ -1,19 +1,3 @@
-// owl-carousel for travel blog
-
-$('.owl-carousel').owlCarousel({
-    loop: true,
-    autoplay: true,
-    autoplayTimeout: 3000,
-    dots: false,
-    nav: true,
-    navText: [
-        $('.owl-navigation .owl-nav-prev'), 
-        $('.owl-navigation .owl-nav-next')
-    ]
-});
-
-AOS.init();
-
 // A simple chatbot that responds with some predefined answers
 function chatbot(input) {
     let output = "";
@@ -28,14 +12,7 @@ function chatbot(input) {
         output = "I can chat with you and answer some simple questions.";
     } else if (input.includes("tell me a joke")) {
         output = "Why did the chicken go to the seance? To get to the other side.";
-    }
-    else if (input.includes("tell me a joke")) {
-        output = "Why did the chicken go to the seance? To get to the other side.";
-    }
-    else if (input.includes("book")) {
-        output = '<a href="../html/book.html" style="text-decoration:none;">Book Now</a>'; 
-    }
-    else {
+    } else {
         output = "Sorry, I don't understand that. Please try something else.";
     }
     return output;
@@ -77,14 +54,14 @@ function displayBotMessage(message) {
 
 // Send the user message and get the bot response
 function sendMessage() {
-    let input = document.getElementById("input-chat").value;
+    let input = document.getElementById("input").value;
     if (input) {
         displayUserMessage(input);
         let output = chatbot(input);
         setTimeout(function() {
             displayBotMessage(output);
         }, 1000);
-        document.getElementById("input-chat").value = "";
+        document.getElementById("input").value = "";
     }
 }
 
@@ -98,10 +75,10 @@ function toggleChat() {
 document.getElementById("chat-icon").addEventListener("click", toggleChat);
 
 // Add a click event listener to the button
-document.getElementById("button-chat").addEventListener("click", sendMessage);
+document.getElementById("button").addEventListener("click", sendMessage);
 
 // Add a keypress event listener to the input
-document.getElementById("input-chat").addEventListener("keypress", function(event) {
+document.getElementById("input").addEventListener("keypress", function(event) {
     if (event.keyCode == 13) {
         sendMessage();
     }

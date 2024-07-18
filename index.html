@@ -28,6 +28,161 @@
     .nav-link:hover{
         color: #a50034;
     }
+    /* Chatbot Styles */
+* {
+    box-sizing: border-box;
+}
+
+
+.chat-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #a50034;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 55px;
+    width: 60px;
+}
+
+.chat-icon i {
+    font-size: 24px;
+}
+
+.container-chat {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    margin: 0;
+    padding: 20px;
+    border-radius: 10px;
+    background:#a50034;
+    z-index: 1000;
+}
+
+.title-chat {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #edf1f3;
+}
+
+.chat {
+    height: 300px;
+    overflow-y: scroll;
+    margin: 10px 0;
+    padding: 2px 0;
+    border-radius: 5px;
+    background: #f7f8f8;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    margin: 0px 0;
+}
+.text{
+    padding-right: 0px;
+}
+
+.user {
+    justify-content: flex-end;
+    padding-right: 0px;
+    margin-right: 0px;
+}
+
+.bot {
+    justify-content: flex-start;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0px;
+}
+
+.user .avatar {
+    order: 2;
+    background: url("./assests/avatar.jpg");
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+}
+
+.bot .avatar {
+    order: 1;
+    
+    background-size: cover;
+    height: 30px;
+    width: 30px;
+}
+
+.text {
+    max-width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 16px;
+    color: white;
+}
+
+.user .text {
+    color: #4a4d52;
+}
+
+.bot .text {
+   color: #8c8c8e;
+}
+
+#input-chat {
+    position: relative;
+    width: 100%;
+    padding: 2px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+    outline: none;
+}
+
+#input-chat:focus {
+    border-color: #8296d0;
+    color: #1e1f1f;
+}
+
+#button-chat {
+    position: absolute;
+    width: 80px;
+    border: none;
+    padding: 1px;
+    background: none;
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 1.1rem;
+    margin-left: -3.5rem;
+    outline: none;
+    
+}
+
+#button-chat i {
+    font-size: 1.5rem;
+    background: none;
+}
+
+
+.chat::-webkit-scrollbar {
+    width: 10px;
+}
+
+.chat::-webkit-scrollbar-thumb {
+    background: #bcbdc0;
+    border-radius: 10px;
+}
     </style>
 </head>
 <body class="container-fluid g-0">
@@ -460,12 +615,23 @@
         </div>
     </div>
 </footer>
+
+<!-----------chatbot---------------->
+
+<div class="chat-icon" id="chat-icon">
+        <i class="fa-solid fa-comments"></i>
+    </div>
+    <div class="container-chat" id="chat-container">
+        <div class="title-chat">Let's Chat</div>
+        <div class="chat" id="chat"></div>
+        <input type="text" class="input" id="input-chat" placeholder="Type your message here...." />
+        <button class="button" id="button-chat"><i class="fa-brands fa-telegram"></i></button>
+    </div>
+
+
+
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-
-
-
-<!--------------x-------------Footer--------------------x--------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="./js/3.7.1.main.js"></script>
 <script src="./js/owl.carousel.min.js"></script>

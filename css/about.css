@@ -55,7 +55,9 @@ body {
     color: rgb(0, 0, 0);
     line-height: 1.6; /* Improved line height for readability */
 }
-
+.formation{
+    font-size: 1.2!important;
+}
 .hero-image img {
     width: 100%;
     height: auto;
@@ -187,4 +189,7 @@ body {
     }
     .container{
         margin-top: 0 !important;
+    }
+    .formation{
+        font-size: 1rem !important;
     }
