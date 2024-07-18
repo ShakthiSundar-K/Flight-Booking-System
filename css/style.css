@@ -95,15 +95,13 @@ nav{
 }
 
 .nav_logo{
-    padding:0 0 0 50px;
+    
     font-weight: 500;
     font-family: "Margarine";
     font-size: 1.1rem;
 }
 
-.login{
-    padding:0 35px 0 0
-}
+
 
 .btns{
     background-color:#a50034;
