@@ -143,6 +143,32 @@ main .site-title .site-background{
     color: var(--text-dark);
 }
 
+.site-title .site-background h1 {
+    color: #F9F6EE;
+    display: inline-block;
+    letter-spacing: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: .15em solid; /* This creates the cursor effect */
+    animation: typing 5s steps(40, end) infinite, cursor 2s step-end infinite alternate;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; } /* Reset to zero width to create the looping effect */
+}
+
+@keyframes cursor {
+    0% { border-color: transparent; }
+    50% { border-color: transparent; }
+    100% { border-color: transparent; }
+}
+
+.site-title .site-background h2{
+    color: #36454F;
+}
+
 main .site-title .btn-2{
     margin: 1.8rem;
     background: #D0D0D0;
@@ -568,8 +594,9 @@ main .container .owl-nav .owl-nav-prev,main .container .owl-nav .owl-nav-next:{
     }
     
     main .site-title .site-background h1{
+        color: #364541;
         font-size: 1.5rem !important;
-        transform: translate(32rem, 10rem);
+        transform: translate(31rem, 10rem);
     }
     
     main .site-title  h2 {
