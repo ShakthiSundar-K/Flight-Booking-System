@@ -297,36 +297,28 @@
   <!-- Custom JavaScript -->
 
   <script>
-   
-      document.addEventListener("DOMContentLoaded", function() {
-        const username = sessionStorage.getItem('username');
-            const loginButton = document.getElementById('login-button');
-            const loginLink = document.getElementById('login-link');
+   document.addEventListener("DOMContentLoaded", function() {
+    const selectBookingBtn = document.getElementById("select-booking-btn");
 
-            if (username) {
-                loginButton.innerHTML = `<button class="btn me-md-5">${username}</button>`;
-            } else {
-                loginButton.innerHTML = `<button class="btn me-md-5"><a href="../html/login.html" style="text-decoration: none;" id="login-link">Login</a></button>`;
-            }
-  const selectBookingBtn = document.getElementById("select-booking-btn");
+    selectBookingBtn.addEventListener("click", function() {
+      // Fetch details from the form
+      const departureDate = document.getElementById("departure-date").value;
+      const departureCity = document.getElementById("departure-city").value;
+      const arrivalCity = document.getElementById("arrival-city").value;
 
-  selectBookingBtn.addEventListener("click", function() {
-    // Fetch details from the form
-    const departureDate = document.getElementById("departure-date").value;
-    const departureCity = document.getElementById("departure-city").value;
-    const arrivalCity = document.getElementById("arrival-city").value;
+      console.log("Departure Date:", departureDate);
+      console.log("Departure City:", departureCity);
+      console.log("Arrival City:", arrivalCity);
 
-    // Store data in sessionStorage (temporary storage)
-    sessionStorage.setItem("departureDate", departureDate);
-    sessionStorage.setItem("departureCity", departureCity);
-    sessionStorage.setItem("arrivalCity", arrivalCity);
+      // Store data in sessionStorage (temporary storage)
+      sessionStorage.setItem("departureDate", departureDate);
+      sessionStorage.setItem("departureCity", departureCity);
+      sessionStorage.setItem("arrivalCity", arrivalCity);
 
-    // Redirect to seat.html
-    window.location.href = "../html/seat.html";
+      // Redirect to seat.html
+      window.location.href = "../html/seat.html";
+    });
   });
-});
-
-
         
     // A simple chatbot that responds with some predefined answers
 function chatbot(input) {
