@@ -12,6 +12,29 @@ $('.owl-carousel').owlCarousel({
     ]
 });
 
+window.onload = function() {
+            const username = sessionStorage.getItem('username');
+            const loginButton = document.getElementById('login-button');
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
+
+            if (username) {
+                loginButton.innerHTML = `<button class="btn me-md-5">${username}</button>`;
+            } else {
+                loginButton.innerHTML = `<button class="btn me-md-5"><a href="../html/login.html" style="text-decoration: none;" id="login-link">Login</a></button>`;
+                
+                if (!sessionStorage.getItem('loggedIn')) {
+                    setTimeout(function() {
+                        popup.style.display = 'block';
+                        overlay.style.display = 'block';
+                    }, 3000); // 5 seconds
+                }
+            }
+        };
+
+        function redirectToLogin() {
+            window.location.href = './html/login.html';
+        }
 AOS.init();
 
 // A simple chatbot that responds with some predefined answers

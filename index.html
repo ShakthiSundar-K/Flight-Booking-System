@@ -189,33 +189,33 @@
 
 <!-------------------Navigation Bar--------------------------------->
    
-  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top" style="background-color: #f8f5ed;">
-    <div class="container-fluid">
-      <a class="navbar-brand ms-3" href="#" style="font-family: Margarine;">SKYHIGH</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./html/about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./html/book.html">Book</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./html/service.html">Services</a>
-          </li>
-        </ul>
-      </div>
-      <div class="login">
-        <button class="btn"><a href="./html/login.html" style="text-decoration: none;">Login</a></button>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top container-fluid">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-3" href="#" style="font-family: Margarine;">SKYHIGH</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./book.html">Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../html/service.html">Services</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="login" id="login-button" style="padding: 0 !important;">
+                <button class="btn"><a href="../html/login.html" style="text-decoration: none;" id="login-link">Login</a></button>
+            </div>
+        </div>
+    </nav>
 <!---------X----------Navigation Bar----------X----------------------->
 
 <!------------------Main site section------------------------------->
@@ -234,6 +234,17 @@
     </section>
 
     <!----------X---------Site--Title-----------------------X------------------->
+
+    <!------------------------pop up------------------------->
+
+     <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <p>Login to continue using the website</p>
+        <button onclick="redirectToLogin()">Login</button>
+    </div>
+
+
+    <!--------x------------pop up---------------x--------------->
 
     
     <!-----------------------Promo Section----------------------------------->

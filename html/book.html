@@ -221,7 +221,7 @@
     <!-----------------Navigation Bar------------------------->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand ms-3" href="#" style="font-family: Margarine;">SKYHIGH</a>
+      <a class="navbar-brand ms-3 me-0" href="#" style="font-family: Margarine;">SKYHIGH</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -234,7 +234,7 @@
             <a class="nav-link" href="../html/about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./book.html">Book</a>
+            <a class="nav-link" href="../html/book.html">Book</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../html/service.html">Services</a>
@@ -242,7 +242,7 @@
         </ul>
       </div>
       <div class="login">
-        <button class="btn me-md-5"><a href="../html/login.html" style="text-decoration: none;" class="login">Login</a></button>
+        <button class="btn me-md-5"><a href="" style="text-decoration: none;" class="login">shakthi</a></button>
       </div>
     </div>
   </nav>
@@ -297,7 +297,17 @@
   <!-- Custom JavaScript -->
 
   <script>
+   
       document.addEventListener("DOMContentLoaded", function() {
+        const username = sessionStorage.getItem('username');
+            const loginButton = document.getElementById('login-button');
+            const loginLink = document.getElementById('login-link');
+
+            if (username) {
+                loginButton.innerHTML = `<button class="btn me-md-5">${username}</button>`;
+            } else {
+                loginButton.innerHTML = `<button class="btn me-md-5"><a href="../html/login.html" style="text-decoration: none;" id="login-link">Login</a></button>`;
+            }
   const selectBookingBtn = document.getElementById("select-booking-btn");
 
   selectBookingBtn.addEventListener("click", function() {

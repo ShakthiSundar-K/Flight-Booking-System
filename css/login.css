@@ -5,7 +5,12 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.message {
+            color: green;
+        }
+        .error {
+            color: red;
+        }
 body,
 input {
   font-family: "Poppins", sans-serif;

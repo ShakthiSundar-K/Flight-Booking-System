@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      src="https://kit.fontawesome.com/64d58efce2.js"
-      crossorigin="anonymous"
-    ></script>
+      src="https://kit.fontawesome.com/64d58efce2.js"crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/login.css" />
     <title>Sign in & Sign up Form</title>
   </head>
@@ -18,13 +16,15 @@
             <h2 class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
+              <input type="text" placeholder="Username" id="username">
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
+              <input type="password" placeholder="Password" id="password">
             </div>
             <input type="submit" value="Login" class="btn solid" />
+            <p id="loginMessage" class="message"></p>
+            <p id="loginError" class="error"></p>
             <p class="social-text">Or Sign in with social platforms</p>
             <div class="social-media">
               <a href="#" class="social-icon">
@@ -80,8 +80,7 @@
           <div class="content">
             <h3>New here ?</h3>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-              ex ratione. Aliquid!
+              Welcome To SkyHigh!
             </p>
             <button class="btn transparent" id="sign-up-btn">
               Sign up
@@ -93,8 +92,7 @@
           <div class="content">
             <h3>One of us ?</h3>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              laboriosam ad deleniti.
+              Welcome To SkyHigh!
             </p>
             <button class="btn transparent" id="sign-in-btn">
               Sign in
@@ -104,7 +102,8 @@
         </div>
       </div>
     </div>
-
+    <p id="loginMessage" class="message"></p>
+    <p id="loginError" class="error"></p>
     <script src="../js/login.js"></script>
   </body>
 </html>
